@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "prettier": "npx prettier . --write",
-    "prepare": "husky"
+    "prepare": "husky",
+    "verify": "npm run lint && npm run test && npm run prettier"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
