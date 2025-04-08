@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../context/theme/ThemeContext";
 import { useTranslation } from "react-i18next";
+import { Button } from "../button";
 
 interface HeaderProps {
   toggleTheme: () => void;
@@ -20,7 +21,7 @@ export const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
         >
           <div className={`w-4 h-4 rounded-full bg-white shadow-md`}></div>
         </button>
-        <button className={`rounded-md border ${theme.outline} py-2 px-4 cursor-pointer`}>{t("signIn")}</button>
+        <Button appearance="outlined">{t("signIn")}</Button>
       </div>
     </header>
   );
