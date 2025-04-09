@@ -17,7 +17,7 @@ export const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
       <div className="flex items-center space-x-4">
         <button
           onClick={toggleTheme}
-          className={`${theme.themeSwitch} rounded-full w-10 h-5 flex items-center transiti transition-all duration-300 cursor-pointer`}
+          className={`${theme.themeSwitch} rounded-full w-10 h-5 flex items-center cursor-pointer`}
         >
           <div className={`w-4 h-4 rounded-full bg-white shadow-md`}></div>
         </button>

@@ -3,6 +3,10 @@ export type Theme = {
   bgSecondary: string;
   textPrimary: string;
   textSecodary: string;
+  textAccent: string;
   outline: string;
   themeSwitch: string;
+  btnContained: string;
+  btnOutlined: string;
+  btnText: string;
 };

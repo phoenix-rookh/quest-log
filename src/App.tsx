@@ -13,8 +13,10 @@ export const App = () => {
 
   return (
     <ThemeContext.Provider value={theme}>
-      <Header toggleTheme={toggleTheme} />
-      <LandingPage onGuest={() => {}} onSignIn={() => {}} />
+      <div className="transition-all duration-200">
+        <Header toggleTheme={toggleTheme} />
+        <LandingPage onGuest={() => {}} onSignIn={() => {}} />
+      </div>
     </ThemeContext.Provider>
   );
 };

@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ButtonAppearance, ButtonSize } from "./types";
-const appearanceMap: Record<ButtonAppearance, string> = {
-  contained: "bg-indigo-600 hover:bg-indigo-700 text-white",
-  outlined: "bg-transparent border border-indigo-600 hover:bg-indigo-50 text-indigo-600",
-  text: "bg-transparent hover:bg-indigo-50 text-indigo-600",
+import { ThemeContext } from "../../context/theme/ThemeContext";
+import { Theme } from "../../context/theme/types/theme";
+
+const getButtonAppearance = (appearance: ButtonAppearance, theme: Theme) => {
+  switch (appearance) {
+    case "contained":
+      return theme.btnContained;
+    case "outlined":
+      return theme.btnOutlined;
+    case "text":
+      return theme.btnText;
+  }
 };
 
 const sizeMap: Record<ButtonSize, string> = {
@@ -20,12 +28,13 @@ interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
 
 export const Button: React.FC<ButtonProps> = (props) => {
   const { appearance = "contained", size = "md", children, type = "button" } = props;
+  const theme = useContext(ThemeContext);
 
   return (
     <button
       {...props}
       type={type}
-      className={`${appearanceMap[appearance]} ${sizeMap[size]} cursor-pointer font-semibold focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2`}
+      className={`${getButtonAppearance(appearance, theme)} ${sizeMap[size]} cursor-pointer font-semibold focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2`}
     >
       {children}
     </button>
