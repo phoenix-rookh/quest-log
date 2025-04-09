@@ -14,7 +14,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onGuest }) =
 
   return (
     <div
-      className={`${theme.bgPrimary} min-h-[calc(100vh-82px)] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 transition-all duration-300`}
+      className={`${theme.bgPrimary} min-h-[calc(100vh-82px)] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8`}
     >
       <div className="max-w-7xl mx-auto flex items-center gap-8">
         <div className="lg:pr-16 max-w-[500px]">
