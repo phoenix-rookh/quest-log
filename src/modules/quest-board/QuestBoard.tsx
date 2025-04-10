@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ThemeContext } from "../common/context/theme/ThemeContext";
+import { ThemeContext } from "@/modules/common/context/theme/ThemeContext";
 
 export const QuestBoard = () => {
   const theme = useContext(ThemeContext);
