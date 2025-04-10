@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { ButtonAppearance, ButtonSize } from "./types";
-import { ThemeContext } from "../../context/theme/ThemeContext";
-import { Theme } from "../../context/theme/types/theme";
+import { ThemeContext } from "@/modules/common/context/theme/ThemeContext";
+import { Theme } from "@/modules/common/context/theme/types/theme";
 
 const getButtonAppearance = (appearance: ButtonAppearance, theme: Theme) => {
   switch (appearance) {

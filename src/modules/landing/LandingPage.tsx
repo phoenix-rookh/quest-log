@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Button } from "../common/components/button";
+import { Button } from "@/modules/common/components/button";
 import { useContext } from "react";
 import { ThemeContext } from "../common/context/theme/ThemeContext";
 

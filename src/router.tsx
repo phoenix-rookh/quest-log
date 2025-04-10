@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router";
+import { QuestBoard } from "@/modules/quest-board";
 import { App } from "./App";
-import { QuestBoard } from "./modules/quest-board";
 
 export const router = createBrowserRouter([
   {

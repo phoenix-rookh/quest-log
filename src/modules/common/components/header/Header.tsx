@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { ThemeContext } from "../../context/theme/ThemeContext";
+import { ThemeContext } from "@/modules/common/context/theme/ThemeContext";
+import { Button } from "@/modules/common/components/button";
 import { useTranslation } from "react-i18next";
-import { Button } from "../button";
 
 interface HeaderProps {
   toggleTheme: () => void;
