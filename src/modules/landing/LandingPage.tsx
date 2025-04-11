@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Button } from "@/modules/common/components/button";
-import { ThemeContext } from "@/modules/common/context/theme/ThemeContext";
-import { useContext } from "react";
+import { useTheme } from "@/modules/common/context/theme";
 
 interface LandingPageProps {
   onSignIn: () => void;
@@ -10,7 +9,7 @@ interface LandingPageProps {
 
 export const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onGuest }) => {
   const { t } = useTranslation(["common", "landing"]);
-  const theme = useContext(ThemeContext);
+  const theme = useTheme();
 
   return (
     <div
