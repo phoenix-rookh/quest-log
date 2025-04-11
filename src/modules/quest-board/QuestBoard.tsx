@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import { ThemeContext } from "@/modules/common/context/theme/ThemeContext";
+import { useTheme } from "@/modules/common/context/theme";
 
 export const QuestBoard = () => {
-  const theme = useContext(ThemeContext);
+  const theme = useTheme();
 
   return (
     <div className="min-h-screen flex flex-col">

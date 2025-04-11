@@ -1,5 +1,4 @@
-import { useContext } from "react";
-import { ThemeContext } from "@/modules/common/context/theme/ThemeContext";
+import { useTheme } from "@/modules/common/context/theme/ThemeContext";
 import { Button } from "@/modules/common/components/button";
 import { useTranslation } from "react-i18next";
 
@@ -8,7 +7,7 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
-  const theme = useContext(ThemeContext);
+  const theme = useTheme();
   const { t } = useTranslation("common");
 
   return (

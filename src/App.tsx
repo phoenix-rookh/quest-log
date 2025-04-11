@@ -3,6 +3,8 @@ import { LandingPage } from "./modules/landing";
 import { darkTheme, lightTheme } from "@/modules/common/context/theme/themes";
 import { ThemeContext } from "@/modules/common/context/theme/ThemeContext";
 import { Header } from "@/modules/common/components/header";
+import { ModalProvider } from "@/modules/common/context/modal";
+import { ModalRoot } from "@/modules/common/components/modal";
 
 export const App = () => {
   const [theme, setTheme] = useState(lightTheme);
@@ -13,10 +15,11 @@ export const App = () => {
 
   return (
     <ThemeContext.Provider value={theme}>
-      <div className="transition-all duration-200">
+      <ModalProvider>
         <Header toggleTheme={toggleTheme} />
         <LandingPage onGuest={() => {}} onSignIn={() => {}} />
-      </div>
+        <ModalRoot />
+      </ModalProvider>
     </ThemeContext.Provider>
   );
 };
