@@ -1,6 +1,7 @@
 import { useTheme } from "@/modules/common/context/theme/ThemeContext";
 import { Button } from "@/modules/common/components/button";
 import { useTranslation } from "react-i18next";
+import { EnvelopeIcon } from "@heroicons/react/24/outline";
 
 interface HeaderProps {
   toggleTheme: () => void;
@@ -12,7 +13,12 @@ export const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
 
   return (
     <header className={`${theme.bgSecondary} ${theme.textPrimary} shadow py-4 px-6 flex items-center justify-between`}>
-      <div className="text-xl font-semibold">{t("appName")}</div>
+      <div className="text-xl font-bold flex gap-3 items-center">
+        <span>
+          <EnvelopeIcon className={`${theme.textAccent} size-6`} />
+        </span>
+        {t("appName")}
+      </div>
       <div className="flex items-center space-x-4">
         <button
           onClick={toggleTheme}
