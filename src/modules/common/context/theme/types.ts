@@ -10,4 +10,5 @@ export type Theme = {
   btnOutlined: string;
   btnText: string;
   btnIcon: string;
+  input: string;
 };
