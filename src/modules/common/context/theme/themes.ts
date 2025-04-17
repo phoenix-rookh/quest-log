@@ -12,6 +12,9 @@ export const lightTheme: Theme = {
   btnOutlined: "bg-transparent border border-indigo-600 hover:bg-indigo-50 text-indigo-600",
   btnText: "bg-transparent hover:bg-indigo-50 text-indigo-600",
   btnIcon: "hover:bg-indigo-50 text-indigo-600",
+  input: "bg-transparent border border-indigo-600 focus:border-indigo-500 text-indigo-600",
+  checkbox:
+    "bg-transparent border border-indigo-600 focus:border-indigo-500 text-indigo-600 appearance-none h-5 w-5 cursor-pointer checked:bg-indigo-600 checked:border-transparent",
 };
 
 export const darkTheme: Theme = {
@@ -26,4 +29,7 @@ export const darkTheme: Theme = {
   btnOutlined: "bg-transparent border border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-indigo-200",
   btnText: "bg-transparent text-indigo-400 hover:bg-indigo-500",
   btnIcon: "text-indigo-400 hover:bg-indigo-500",
+  input: "bg-transparent border border-indigo-500 focus:border-indigo-400 text-indigo-400",
+  checkbox:
+    "bg-transparent border border-indigo-500 focus:border-indigo-400 text-indigo-400 appearance-none h-5 w-5 cursor-pointer checked:bg-indigo-500 checked:border-transparent",
 };
