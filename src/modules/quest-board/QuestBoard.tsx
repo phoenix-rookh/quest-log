@@ -1,20 +1,12 @@
-import { useTheme } from "@/modules/common/context/theme";
+import { QuestColumn } from "@/modules/quest-board/components/quest-column";
 
 export const QuestBoard = () => {
-  const theme = useTheme();
-
   return (
     <div className="min-h-screen flex flex-col">
-      <main className="flex flex-grow p-6 space-x-4">
-        <div className={`${theme.bgSecondary} rounded-md shadow-md flex-1 overflow-y-auto p-4`}>
-          <h2 className={`${theme.textSecodary} text-lg font-semibold mb-2`}>Journal</h2>
-        </div>
-        <div className={`${theme.bgSecondary} rounded-md shadow-md flex-1 overflow-y-auto p-4`}>
-          <h2 className={`${theme.textSecodary} text-lg font-semibold mb-2`}>In progress</h2>
-        </div>
-        <div className={`${theme.bgSecondary} rounded-md shadow-md flex-1 overflow-y-auto p-4`}>
-          <h2 className={`${theme.textSecodary} text-lg font-semibold mb-2`}>Done</h2>
-        </div>
+      <main className="flex flex-grow p-6 space-x-4 overflow-hidden">
+        <QuestColumn title="Journal" />
+        <QuestColumn title="In progress" />
+        <QuestColumn title="Finished" />
       </main>
     </div>
   );
