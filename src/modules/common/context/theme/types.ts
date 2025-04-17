@@ -11,4 +11,5 @@ export type Theme = {
   btnText: string;
   btnIcon: string;
   input: string;
+  checkbox: string;
 };
